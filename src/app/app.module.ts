@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { IdeaComponent } from './idea/idea.component';
 import { IdeaDetailsComponent } from './idea-details/idea-details.component';
 import { HighlightDirective } from './highlight.directive';
+import { IdeaFormComponent } from './idea-form/idea-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdeaComponent,
     IdeaDetailsComponent,
-    HighlightDirective
+    HighlightDirective,
+    IdeaFormComponent
   ],
   imports: [
     BrowserModule
