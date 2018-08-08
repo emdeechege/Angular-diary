@@ -8,7 +8,7 @@ import {Idea} from '../idea'
 export class IdeaComponent implements OnInit {
 
   ideas = [
-      new Idea(1, 'Feed birds', 'Find a new spot to feed them'),
+      new Idea(1, 'Feed birds', 'Find a new spot to feed them', new Date(2018, 8, 14) ),
     ]
 
     addNewidea(idea) {
