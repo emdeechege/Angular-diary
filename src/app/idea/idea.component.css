@@ -1,0 +1,19 @@
+.jumbotron {
+  align-content: center;
+  background-color: brown;
+  text-align: center;
+}
+
+#one {
+  background-color: green;
+}
+
+#two {
+  background-color: cyan;
+  float: right;
+}
+
+/* #star{
+  margin:0;
+  padding: 0;
+} */

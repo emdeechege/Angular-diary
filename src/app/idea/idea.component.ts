@@ -11,7 +11,7 @@ export class IdeaComponent implements OnInit {
       new Idea(1, 'Feed birds', 'Find a new spot to feed them', new Date(2018, 8, 14) ),
     ]
 
-    addNewidea(idea) {
+    addNewIdea(idea) {
     let ideaLength = this.ideas.length;
     idea.id = ideaLength+1;
     idea.completeDate = new Date(idea.completeDate)

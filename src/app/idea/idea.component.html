@@ -1,53 +1,34 @@
-<div class="row">
-  <h1>Worlds Best Secrets!</h1>
-</div>
+<div class="container" id="star">
+  <div class="jumbotron">
+    <h1>Diary!</h1>
+  </div>
 
-<div class="container">
-<div class="row">
-  <div class="col-6">
+  <div class="container">
     <div class="row">
-    <app-idea-form (addIdea)="addNewIdea($event)"></app-idea-form>
-  </div>
-  <div class="col-6">
-    <div class="row"></div>
-    <div class="row" *ngFor='let idea of ideas;let i = index'>
-    <div class="row">
-      <h4 id="{{i}}" appStrikethrough>{{idea.name}} due on {{idea.completeDate|date|uppercase}}</h4>
-      <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+      <div class="col-6" id="one">
+        <app-idea-form (addIdea)="addNewIdea($event)"></app-idea-form>
+
+      </div>
+
+
+      <div class="col-6" id="two">
+        <h2>Future Plans!</h2>
+        <div class="row" *ngFor='let idea of ideas;let i = index'>
+
+          <h4 id="{{i}}" appHighlight>{{idea.name}} due on {{idea.completeDate|date}}</h4>
+
+          <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+
+          <div class="row" *ngIf="idea.showDescription">
+
+            <app-idea-details [idea]='idea' (isComplete)='deleteIdea($event,i)'></app-idea-details>
+          </div>
+        </div>
+
+        <p *ngIf='ideas.length > 5'>You have too many ideas</p>
+      </div>
     </div>
-    <div class="row" *ngIf="idea.showDescription">
-      <app-idea-details [idea]='idea' (isComplete)='deleteIdea($event,i)'></app-idea-details>
-    </div>
   </div>
-</div>
-<p *ngIf='ideas.length > 5'>You have too many ideas</p>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

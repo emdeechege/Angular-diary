@@ -10,9 +10,9 @@ export class IdeaFormComponent implements OnInit {
 
   newIdea=new Idea(0,"","",new Date());
 
-      @Output() addIdea=new EventEmitter<Goal>();
+      @Output() addIdea=new EventEmitter<Idea>();
 
-      submitGoal(){
+      submitIdea(){
         this.addIdea.emit(this.newIdea);
       }
 
